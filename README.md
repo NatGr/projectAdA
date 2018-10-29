@@ -6,6 +6,10 @@ A 150 word description of the project idea, goals, dataset used. What story you 
 # Research questions
 A list of research questions you would like to address during the project. 
 
+What is the reputation of countries seen from abroad ?
+Is this vision different from the inside of the country?
+What are the domains that have an opinion opposite to that of the country ?
+
 # Dataset
 List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant.
 
