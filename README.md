@@ -1,4 +1,4 @@
-# What do the world thinks of us?
+# What does the world think of us?
 # Abstract
 <!-- A 150 word description of the project idea, goals, dataset used. What story you would like to tell and why? What's the motivation behind your project? -->
 
@@ -12,25 +12,30 @@ The goal and motivation of the project would be to identify countries that are l
 	- What is the reputation of countries seen from abroad ?
 	- Is this vision different from the image the national news give of the country ?
 	- Is the built estimator statistically reliable (amount of samples) ?
-	- Do the scores vary a lot when we change the assessing methodology (using the confidence of the GDELT database, mean of the opinions vs median opinion) ?
-	- (If time permits) giving news from "bad" countries less weight to compute the "goodness" of a country (example: Saudi Arabia has bad reputation so don't care so much that Saudi Arabia criticizing Canada). 
+	- Do the scores vary a lot when we change the assessing methodology (using the confidence of the 
+	GDELT database, mean of the opinions vs median opinion) ?
+	- (If time permits) giving news from "bad" countries less weight to compute the "goodness"
+	 of a country (example: Saudi Arabia has bad reputation so don't care so much that Saudi Arabia criticizing Canada). 
 
 # Dataset
 <!-- List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant. -->
 
 We want to use the GDELT dataset. More precisely we are interested in:  
 
-	- event table (*export.csv*):
-		- *GlobalEventID*: the id of the event
-		- *MonthYear*: the month and year in which the event occured
-		- *Actor1CountryCode*: *Actor1CountryCode* is more reliable to determine the first actor nationality than *Actor1Geo_CountryCode* <sup>1</sup>.
-		- *AvgTone*: if we want to perform some source-independent ranking.
-	- mentions table (*mentions.csv*):
-		- *GlobalEventID*: the id of the event
-		- *MentionTimeDate*: in case we want to sort news based on older events
-		- *MentionType* and *MentionSourceName*: to get the country of the source, in the case of urls, we will have to find a mapping from the website url to the website's country. If there are other types of mentions (CORE, DTIC, ...) in non-negligible numbers, we will have to find their countries as well (probably using the *MentionIdentifier* column)
-		- *Confidence*: in case we try to weight the importance of a news based on the confidence GDELT has he computed the metadata correctly
-		- *MentionDocTone*: the tone used in the article.
+	- event table (export.csv):
+		- GlobalEventID: the id of the event
+		- MonthYear: the month and year in which the event occured
+		- Actor1CountryCode: Actor1CountryCode is more reliable to determine the first actor 
+		nationality than Actor1Geo_CountryCode <sup>1</sup>.
+		- AvgTone: if we want to perform some source-independent ranking.
+	- mentions table (mentions.csv):
+		- GlobalEventID: the id of the event
+		- MentionTimeDate: in case we want to sort news based on older events
+		- MentionType and MentionSourceName: to get the country of the source, in the case of urls,
+		we will have to find a mapping from the website url to the website's country. If there are other types of mentions (CORE, DTIC, ...) in non-negligible numbers, we will have to find their countries as well (probably using the MentionIdentifier column)
+		- Confidence: in case we try to weight the importance of a news based on the confidence GDELT 
+		has he computed the metadata correctly
+		- MentionDocTone: the tone used in the article.
 
 # A list of internal milestones up until project milestone 2
 <!-- Add here a sketch of your planning for the next project milestone. -->
