@@ -45,6 +45,23 @@ We want to use the GDELT dataset. More precisely we are interested in:
 # A list of internal milestones up until project milestone 2
 <!-- Add here a sketch of your planning for the next project milestone. -->
 
+11.11 :
+
+ - Clean and organize our data.
+
+18.11 : 
+
+ - Categorize country according their reputation 
+ - Compare with the vision from the national news
+
+25.11 :
+
+ - Analyse results
+ - Comment code 
+ - Goals and plans for the next milestone
+
+
+
 # Questions for TAa
 <!-- Add here some questions you have for us, in general or project-specific. -->
 
