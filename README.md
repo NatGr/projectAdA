@@ -48,17 +48,17 @@ We want to use the GDELT dataset. More precisely we are interested in:
 11.11 :
 
  - Clean and organize our data in dataframes, if the size of the resulting dataframes is not too important, download locally.
+ - Categorize countries according to their reputation
+ - Compare with the vision from the national news
 
 18.11 : 
 
- - Categorize countries according to their reputation
- - Compare with the vision from the national news
  - trying different approaches for assesing scores
+ - Analyse statistical reliability of the results
+ - Analyse results (what to keep, ...)
 
 25.11 :
 
- - Analyse statistical reliability of the results
- - Analyse results (what to keep, ...)
  - Completing the notebook
  - Goals and plans for the next milestone
 
