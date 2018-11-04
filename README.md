@@ -42,6 +42,7 @@ We want to use the GDELT dataset. More precisely we are interested in:
 		has he computed the metadata correctly
 		- MentionDocTone: the tone used in the article.
 
+Regarding the data size, the total dataset weight is of 
 # A list of internal milestones up until project milestone 2
 <!-- Add here a sketch of your planning for the next project milestone. -->
 
