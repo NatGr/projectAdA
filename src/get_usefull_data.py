@@ -1,6 +1,23 @@
 """
 get the data we are interested in from the 112Go GDELT csv files on the cluster and
 save it as parquet files
+
+-- output dataframes:
+
+	-event:
+		-Id: the id of the event
+		-Date: the date of the event
+		-Country: the country of the actor that provoked the event
+		-Type: the Type of the actor that provoquet the event
+		-AvgTone: the average tone about the event
+		
+	-mentions:
+		-EventId: the id of the correspongind event
+		-Date: the date of the mention
+		-SourceName: the name of the source of the mention
+		-Country: the country of the mention
+		-Confidence: the confidence GDELT has in it's parsing of the information
+		-Tone: the tone used by the mention about the event
 """
 import os
 
@@ -9,7 +26,6 @@ from pyspark.sql.functions import to_date
 from datetime import datetime
 
 spark = SparkSession.builder.getOrCreate()
-spark.conf.set('spark.sql.session.timeZone', 'UTC')
 sc = spark.sparkContext
 
 
@@ -91,7 +107,7 @@ mapping_url = mapping_url.select(mapping_url.SourceCommonName.alias("url"), mapp
 mapping_url.registerTempTable('mappingurl')
 
 replace_countries_query="""
-SELECT EventId, Date, Country, Confidence, Tone
+SELECT EventId, Date, SourceName, Country, Confidence, Tone
 FROM mentions_cleaned INNER JOIN mappingurl ON mentions_cleaned.SourceName = mappingurl.url
 """  # transforms urls into source countries
 mentions_cleaned = spark.sql(replace_countries_query)

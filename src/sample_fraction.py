@@ -5,10 +5,9 @@ import os
 from pyspark.sql import *
 
 spark = SparkSession.builder.getOrCreate()
-spark.conf.set('spark.sql.session.timeZone', 'UTC')
 sc = spark.sparkContext
 
-EXTRACT_PERCENTAGE = 1
+EXTRACT_PERCENTAGE = 2
 PARQUET_BASE_FOLDER = "hdfs:///user/greffe"
 PARQUET_FOLDER_NAME_EVENT = os.path.join(PARQUET_BASE_FOLDER, "Event.parquet")
 PARQUET_FOLDER_NAME_MENTIONS = os.path.join(PARQUET_BASE_FOLDER, "Mentions.parquet")
