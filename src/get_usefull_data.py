@@ -8,7 +8,7 @@ save it as parquet files
 		-Id: the id of the event
 		-Date: the date of the event
 		-Country: the country of the actor that provoked the event
-		-Type: the Type of the actor that provoquet the event
+		-Type: the Type of the actor that provoked the event
 		-AvgTone: the average tone about the event
 		
 	-mentions:
