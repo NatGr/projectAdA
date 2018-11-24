@@ -14,13 +14,14 @@ The goal and motivation of the project would be to identify countries that are l
 	- Is the built estimator statistically reliable (amount of samples) ?
 	- Do the scores vary a lot when we change the assessing methodology (using the confidence attribute 
 	of the GDELT database, mean of the opinions vs median opinion) ?
-	- (If time permits) giving news from "bad" countries less weight to compute the "goodness"
+	- Giving news from "bad" countries less weight to compute the "goodness"
 	 of a country (example: Saudi Arabia has bad reputation so don't care so much 
 	 that Saudi Arabia criticizes Canada). 
-	- (If time permits) using the *Actor1Type1Code* field to identify the type of actor
+	- Using the *Actor1Type1Code* field to identify the type of actor
 	 the event refers to (ex: government, civilians,...) and refine the score of a 
 	 country in different scores. This will also reduce the amount of available data 
 	 since the *Actor1Type1Code* field is often blank.
+	 - Showing differences between the opinions of different mediums inside of  acountry
 
 # Dataset
 <!-- List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant. -->
@@ -42,26 +43,27 @@ We want to use the GDELT dataset. More precisely we are interested in:
 		has he computed the metadata correctly
 		- MentionDocTone: the tone used in the article.
 
-Regarding the data size, the total dataset weight is of 112GB but it is mostly composed of the GDELT graph which we won't use. We hope that once we extracted the columns we are interested in and save them as parquet files, we will be able to retreive the data on our computers to perform the rest of the analysis locally.
+Regarding the data size, the total dataset weight is of 112GB but it is mostly composed of the GDELT graph which we won't use. After performing the above mentionned data selecting/cleaning, the size of the parquet files were of 0.83 and 3.09 GB (12GB on disc). We thus decided to download a subset of these locally to test our scripts and then to perform the analysis on the real data on the cluster.
+
 # A list of internal milestones up until project milestone 2
 <!-- Add here a sketch of your planning for the next project milestone. -->
 
 11.11 :
 
- - Clean and organize our data in dataframes, if the size of the resulting dataframes is not too important, download locally.
- - Categorize countries according to their reputation
- - Compare with the vision from the national news
+ - ~Clean and organize our data in dataframes, if the size of the resulting dataframes is not too important, download locally.~
+ - ~Categorize countries according to their reputation~
+ - ~Compare with the vision from the national news~
 
 18.11 : 
 
- - trying different approaches for assesing scores
- - Analyse statistical reliability of the results
- - Analyse results (what to keep, ...)
+ - ~trying different approaches for assesing scores~
+ - ~Analyse statistical reliability of the results~
+ - ~Analyse results (what to keep, ...)~
 
 25.11 :
 
- - Completing the notebook
- - Goals and plans for the next milestone
+ - ~Completing the notebook~
+ - ~Goals and plans for the next milestone~
 
 
 
