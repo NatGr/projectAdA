@@ -66,24 +66,24 @@ Regarding the data size, the total dataset weight is of 112GB but it is mostly c
  - ~Goals and plans for the next milestone~
 
 -----
- 
-02/12:  
-	- use the different types of actors of a country to compute several ranks and compare these between countries with confidence intervals.  
-	- interpret inner and outer view scatterplot (maybe relate these with PIB, continent, wether the country is seen as a democracy by the occidental world,...)  
-   - trying to group countries in different clusters from the country_to_country view  
+02/12:
+- use the different types of actors of a country to compute several ranks and compare these between countries with confidence intervals.  
+- interpret inner and outer view scatterplot (maybe relate these with PIB, continent, wether the country is seen as a democracy by the occidental world,...)
+- trying to group countries in different clusters from the country_to_country view
+
 06/12:  
-   - compare the average tone of small versus big medias to see if there is a difference  
-   - try to get a global idea about inner-media variance inside of a country
+- compare the average tone of small versus big medias to see if there is a difference  
+- try to get a global idea about inner-media variance inside of a country
 16/12:
-   - once we have decided what to keep, what to say and how to order it, designing the data story (animations, beautiful plots on javascript)  
+- once we have decided what to keep, what to say and how to order it, designing the data story (animations, beautiful plots on javascript)  
 
 -----
 
     
 15/01:
-   - deciding what to put on the poster  
+- deciding what to put on the poster  
 21/01:
-   - poster creation and presentation repetition  
+- poster creation and presentation repetition  
     
 The presentation should be organised as follow (subject to change):
     1. Global results
