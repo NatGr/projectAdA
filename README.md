@@ -74,6 +74,7 @@ Regarding the data size, the total dataset weight is of 112GB but it is mostly c
 06/12:  
 - compare the average tone of small versus big medias to see if there is a difference  
 - try to get a global idea about inner-media variance inside of a country
+
 16/12:
 - once we have decided what to keep, what to say and how to order it, designing the data story (animations, beautiful plots on javascript)  
 
