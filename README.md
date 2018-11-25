@@ -45,7 +45,7 @@ We want to use the GDELT dataset. More precisely we are interested in:
 
 Regarding the data size, the total dataset weight is of 112GB but it is mostly composed of the GDELT graph which we won't use. After performing the above mentionned data selecting/cleaning, the size of the parquet files were of 0.83 and 3.09 GB (12GB on disc). We thus decided to download a subset of these locally to test our scripts and then to perform the analysis on the real data on the cluster.
 
-# A list of internal milestones up until project milestone 3
+# A list of internal milestones
 <!-- Add here a sketch of your planning for the next project milestone. -->
 
 11.11 :
