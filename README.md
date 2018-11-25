@@ -86,9 +86,9 @@ Regarding the data size, the total dataset weight is of 112GB but it is mostly c
 - poster creation and presentation repetition  
     
 The presentation should be organised as follow (subject to change):
-    1. Global results
-    2. inner vs outer view interpretation
-    3. clustering
+1. Global results
+2. inner vs outer view interpretation
+3. clustering
 
 
 # Questions for TAa
