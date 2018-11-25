@@ -45,7 +45,7 @@ We want to use the GDELT dataset. More precisely we are interested in:
 
 Regarding the data size, the total dataset weight is of 112GB but it is mostly composed of the GDELT graph which we won't use. After performing the above mentionned data selecting/cleaning, the size of the parquet files were of 0.83 and 3.09 GB (12GB on disc). We thus decided to download a subset of these locally to test our scripts and then to perform the analysis on the real data on the cluster.
 
-# A list of internal milestones up until project milestone 2
+# A list of internal milestones up until project milestone 3
 <!-- Add here a sketch of your planning for the next project milestone. -->
 
 11.11 :
@@ -65,6 +65,30 @@ Regarding the data size, the total dataset weight is of 112GB but it is mostly c
  - ~Completing the notebook~
  - ~Goals and plans for the next milestone~
 
+-----
+ 
+02/12:  
+	- use the different types of actors of a country to compute several ranks and compare these between countries with confidence intervals.
+	- interpret inner and outer view scatterplot (maybe relate these with PIB, continent, wether the country is seen as a democracy by the occidental world,...)
+   - trying to group countries in different clusters from the country_to_country view
+06/12:
+   - compare the average tone of small versus big medias to see if there is a difference
+   - try to get a global idea about inner-media variance inside of a country
+16/12:
+   - once we have decided what to keep, what to say and how to order it, designing the data story (animations, beautiful plots on javascript)
+
+-----
+
+    
+15/01:
+   - deciding what to put on the poster  
+21/01:
+   - poster creation and presentation repetition  
+    
+The presentation should be organised as follow (subject to change):
+    1. Global results
+    2. inner vs outer view interpretation
+    3. clustering
 
 
 # Questions for TAa
