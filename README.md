@@ -83,6 +83,7 @@ Regarding the data size, the total dataset weight is of 112GB but it is mostly c
     
 15/01:
 - deciding what to put on the poster  
+
 21/01:
 - poster creation and presentation repetition  
     
