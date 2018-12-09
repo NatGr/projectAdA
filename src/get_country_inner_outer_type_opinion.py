@@ -1,7 +1,8 @@
 """
-return the opinion of a country from inside of it and from the outer world
+return the opinion of the different actors of a country from inside of it and from the outer world
 	both output dataframes (inner view and outer view) have the same columns:
 		-country
+		-actor_type
 		-avg_tone
 		-stddev_tone
 		-count_mentions: number of distinct mentions
@@ -25,14 +26,15 @@ sc.addFile("hdfs:///user/greffe/perform_join.py")
 from perform_join import perform_join  # must be done after spark context
 
 OUT_DIR = "hdfs:///user/greffe"
-OUTPUT_INNER_VIEW = os.path.join(OUT_DIR, "country_inner_view.csv")
-OUTPUT_OUTER_VIEW = os.path.join(OUT_DIR, "country_outer_view.csv")
+OUTPUT_INNER_VIEW = os.path.join(OUT_DIR, "country_inner_type_view.csv")
+OUTPUT_OUTER_VIEW = os.path.join(OUT_DIR, "country_outer_type_view.csv")
 
 joined_table = perform_join(spark)
 
 # view of a country about itself
 queries = """
 SELECT ActorCountry AS country, 
+ActorType AS actor_type,
 avg(Tone) AS avg_tone, 
 stddev(Tone) AS std_tone, 
 count(Tone) AS count_mentions, 
@@ -44,8 +46,8 @@ percentile_approx(Tone, 0.25) AS first_quartile_tone,
 percentile_approx(Tone, 0.5) AS median_tone, 
 percentile_approx(Tone, 0.75) AS third_quartile_tone
 FROM joined_table
-WHERE ActorCountry {} MentionCountry
-GROUP BY ActorCountry
+WHERE ActorCountry {} MentionCountry AND ActorType IS NOT NULL
+GROUP BY ActorCountry, ActorType
 """  # statistical info about Tone, formatted with an equal for the inner view of the country or a not equal for the outer view
 
 # we execute the body of the loop with an equal sign for inner view and a sql not equal for outer_view

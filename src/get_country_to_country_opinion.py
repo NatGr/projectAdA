@@ -23,26 +23,13 @@ from pyspark.sql.functions import isnan, when, col
 spark = SparkSession.builder.getOrCreate()
 sc = spark.sparkContext
 
-DATA_DIR = "hdfs:///user/greffe"
+sc.addFile("hdfs:///user/greffe/perform_join.py")
+from perform_join import perform_join  # must be done after spark context
+
 OUT_DIR = "hdfs:///user/greffe"
-PARQUET_FOLDER_NAME_EVENT = os.path.join(DATA_DIR, "Event.parquet")
-PARQUET_FOLDER_NAME_MENTIONS = os.path.join(DATA_DIR, "Mentions.parquet")
 OUTPUT_C_TO_C_VIEW = os.path.join(OUT_DIR, "country_to_country_view.csv")
 
-events = spark.read.parquet(PARQUET_FOLDER_NAME_EVENT)
-mentions = spark.read.parquet(PARQUET_FOLDER_NAME_MENTIONS)
-events.registerTempTable('events')
-mentions.registerTempTable('mentions')
-
-join_query = """
-SELECT events.Id, events.Date AS EventDate, events.Country AS ActorCountry, events.Type AS ActorType, 
-mentions.Date AS MentionDate, mentions.SourceName AS SourceName, mentions.Country AS MentionCountry, 
-mentions.Confidence AS Confidence, mentions.Tone AS Tone
-FROM mentions INNER JOIN events ON events.Id = mentions.EventId
-"""  # join the two tables and group it by the actor and the mention country
-
-joined_table = spark.sql(join_query)
-joined_table.registerTempTable('joined_table')
+joined_table = perform_join(spark)
 
 # view of a country about itself
 c_to_c_view_query="""
