@@ -4,7 +4,7 @@ return the opinion of the different actors of a country from inside of it and fr
 		-country
 		-actor_type
 		-avg_tone
-		-stddev_tone
+		-std_tone
 		-count_mentions: number of distinct mentions
 		-count_events: number of distinct events
 		-avg_conf

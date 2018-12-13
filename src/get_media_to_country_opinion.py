@@ -6,7 +6,7 @@ return the opinion of a media about a country the output dataframe will contain:
 		-source_country
 		-source_name
 		-avg_tone
-		-stddev_tone
+		-std_tone
 		-count_mentions: number of distinct mentions
 		-count_events: number of distinct events
 		-avg_conf

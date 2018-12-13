@@ -6,7 +6,7 @@ the output dataframe will contain: (actor_country and mention_country could be t
 		-mention_country
 		-actor_type
 		-avg_tone
-		-stddev_tone
+		-std_tone
 		-count_mentions: number of distinct mentions
 		-count_events: number of distinct events
 		-avg_conf

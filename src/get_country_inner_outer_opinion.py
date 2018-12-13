@@ -3,7 +3,7 @@ return the opinion of a country from inside of it and from the outer world
 	both output dataframes (inner view and outer view) have the same columns:
 		-country
 		-avg_tone
-		-stddev_tone
+		-std_tone
 		-count_mentions: number of distinct mentions
 		-count_events: number of distinct events
 		-avg_conf
