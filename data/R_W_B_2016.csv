@@ -1,0 +1,180 @@
+rank,name,score
+1,Finland,8.59
+2,Netherlands,8.76
+3,Norway,8.79
+4,Denmark,8.89
+5,New Zealand,10.01
+6,Costa Rica,11.10
+7,Switzerland,11.76
+8,Sweden,12.33
+9,Ireland,12.40
+10,Jamaica,12.45
+11,Austria,13.18
+12,Slovak Republic,13.26
+13,Belgium,14.18
+14,Estonia,14.31
+15,Luxembourg,14.43
+16,Germany,14.80
+17,Namibia,15.15
+18,Canada,15.26
+19,Iceland,15.30
+20,Uruguay,15.88
+21,Czech Republic,16.66
+22,Suriname,16.70
+23,Portugal,17.27
+24,Latvia,17.38
+25,Australia,17.84
+26,Ghana,17.95
+28,Liechtenstein,18.36
+29,Samoa,18.80
+31,Chile,19.23
+32,Cape Verde,19.82
+33,Andorra,19.87
+34,Spain,19.92
+35,Lithuania,19.95
+36,Belize,20.61
+37,Tonga,21.24
+38,United Kingdom,21.70
+39,South Africa,21.92
+40,Slovenia,22.26
+41,United States,22.49
+42,Burkina Faso,22.66
+43,Botswana,22.91
+44,Trinidad and Tobago,23.29
+45,France,23.83
+46,Malta,23.84
+47,Poland,23.89
+48,Mauritania,24.03
+49,Romania,24.29
+50,Comoros,24.33
+51,Taiwan,24.37
+52,Niger,24.62
+53,Haiti,24.66
+54,Argentina,25.09
+55,Papua New Guinea,25.81
+56,Madagascar,27.04
+57,Guyana,27.07
+58,El Salvador,27.20
+59,Serbia,27.60
+60,Mongolia,27.61
+61,Mauritius,27.69
+62,Dominican Republic,27.90
+63,Croatia,27.91
+64,Georgia,27.96
+65,Senegal,27.99
+66,Malawi,28.12
+67,Hungary,28.17
+68,Bosnia-Herzegovina,28.45
+69,Hong Kong,28.50
+70,South Korea,28.58
+71,Tanzania,28.65
+72,Japan,28.67
+73,Lesotho,28.78
+74,Armenia,28.79
+75,Northern Cyprus,29.88
+75,Nicaragua,28.82
+76,Moldova,28.83
+77,Italy,28.93
+78,Benin,28.97
+79,Guinea-Bissau,29.03
+80,Fiji,29.37
+81,Cyprus,29.54
+82,Albania,29.92
+83,Sierra Leone,29.94
+84,Peru,29.99
+85,Kyrgyzstan,30.16
+86,Ivory Coast,30.17
+87,Mozambique,30.25
+88,Togo,30.31
+89,Greece,30.35
+90,Kosovo,30.50
+91,Panama,30.59
+92,Seychelles,30.60
+93,Liberia,30.71
+94,Bhutan,30.73
+95,Kenya,31.16
+96,Tunisia,31.60
+97,Bolivia,31.78
+98,Lebanon,31.95
+99,East Timor,32.02
+100,Gabon,32.20
+101,Israel,32.58
+102,Uganda,32.58
+103,Kuwait,32.59
+104,Brazil,32.62
+105,Nepal,32.62
+106,Montenegro,32.79
+107,Ukraine,32.93
+108,Guinea,33.08
+109,Ecuador,33.21
+110,Central African Republic,33.60
+111,Paraguay,33.63
+112,Maldives,34.17
+113,Bulgaria,34.46
+114,Zambia,35.08
+115,Congo,35.84
+116,Nigeria,35.90
+117,Qatar,35.97
+118,Macedonia,36.09
+119,United Arab Emirates,36.73
+120,Afghanistan,37.75
+121,Guatemala,38.03
+122,Mali,39.83
+123,Angola,39.89
+124,Zimbabwe,40.41
+125,Oman,40.43
+126,Cameroon,40.53
+127,Chad,40.59
+128,Cambodia,40.70
+129,Algeria,41.69
+130,Indonesia,41.72
+131,Morocco,42.64
+132,West Bank,42.93
+133,India,43.17
+134,Colombia,44.11
+135,Jordan,44.49
+136,Thailand,44.53
+137,Honduras,44.62
+138,Philippines,44.66
+139,Venezuela,44.77
+140,South Sudan,44.87
+141,Sri Lanka,44.96
+142,Ethiopia,45.13
+143,Myanmar,45.48
+144,Bangladesh,45.94
+145,Gambia,46.53
+146,Malaysia,46.57
+147,Pakistan,48.52
+148,Russia,49.03
+149,Mexico,49.33
+150,Tajikistan,50.34
+151,Turkey,50.76
+152,Democratic Republic of the Congo,50.97
+153,Swaziland,52.37
+154,Singapore,52.96
+155,Brunei,53.85
+156,Burundi,54.10
+157,Belarus,54.32
+158,Iraq,54.35
+159,Egypt,54.45
+160,Kazakhstan,54.55
+161,Rwanda,54.61
+162,Bahrain,54.86
+163,Azerbaijan,57.89
+164,Libya,57.89
+165,Saudi Arabia,59.72
+166,Uzbekistan,61.15
+167,Somalia,65.35
+168,Equatorial Guinea,66.47
+169,Iran,66.52
+170,Yemen,67.07
+171,Cuba,70.23
+172,Djibouti,70.90
+173,Laos,71.58
+174,Sudan,72.53
+175,Vietnam,74.27
+176,China,80.96
+177,Syria,81.35
+178,Turkmenistan,83.44
+179,North Korea,83.76
+180,Eritrea,83.92
