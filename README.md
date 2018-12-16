@@ -54,10 +54,10 @@ The script we ran on the cluster are located in the src folder.
 To extract the aforementionned columns, we used *get\_usefull\_data.py*, *sample\_fraction.py* is used to sample a fraction of the data that we can use locally. *perform\_join.py* is a utility function used by the other scripts to preprocess the parquet files outputted by *get\_usefull\_data.py*. The other scripts generate the different dataframes we load in the notebook from the parquet files.  
 
 # Repository
-	- data/			Parquet and CSV files to be computed and analyse
-	- data story/		Plots to be export to the datastory
-	- src/			Python scripts to compute plots and a few other actions
-	- doc/			GDELT documentation
+	- data/			Parquet and CSV files to be computed and analysed
+	- data story/		Plots to be exported to the datastory
+	- src/			Python scripts to gather data from cluster
+	- doc/			GDELT documentation and some examples of the cluester's data
 	- Notebook.ipynb 	Principal notebook where all the data is computed
 	- README.md
 	
