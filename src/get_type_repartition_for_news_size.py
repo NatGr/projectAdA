@@ -1,10 +1,11 @@
 """
-return the number of times the news sources belonging to each size cluster mention each news type
+return a dataframe containing for each (ActorCountry, ActorType, cluster), the average, std and count of the tone
+employed by media of size cluster to talk about the actors of type ActorType coming from foreign country ActorCountry
 """
 
 import os
 from pyspark.sql import *
-from pyspark.sql.functions import isnan, when, col
+from pyspark.sql.functions import isnan, when, col, isnull
 
 
 spark = SparkSession.builder.getOrCreate()
@@ -26,12 +27,11 @@ joined_table = perform_join(spark)
 
 
 join_cluster_query="""
-SELECT SourceName, 
-MentionCountry,
+SELECT ActorCountry,
 ActorType,
 Tone,
 cluster
-FROM joined_table INNER JOIN source_cluster ON joined_table.SourceName = source_cluster.source_name and joined_table.MentionCountry = source_cluster.source_country
+FROM joined_table INNER JOIN source_cluster ON (joined_table.SourceName = source_cluster.source_name and joined_table.MentionCountry = source_cluster.source_country)
 WHERE joined_table.MentionCountry <> joined_table.ActorCountry
 """
 
@@ -40,17 +40,19 @@ joined_cluster_table = spark.sql(join_cluster_query)
 joined_cluster_table.registerTempTable('joined_cluster_table')
 
 
+joined_cluster_table = joined_cluster_table.withColumn("ActorType", when(isnull(col("ActorType")), "?").otherwise(joined_cluster_table.ActorType))  
+# because grouping by null doesn't work on the cluster
+
 # getting the average type
 type_query="""
-SELECT SourceName AS source_name, 
-MentionCountry AS source_country,
-ActorType AS actor_type,
+SELECT ActorCountry AS country,
+ActorType AS type,
 cluster,
 avg(Tone) AS avg_tone, 
 stddev(Tone) AS std_tone, 
-count(Tone) AS count_mentions,
+count(Tone) AS count_mentions
 FROM joined_cluster_table
-GROUP BY SourceName, MentionCountry, ActorType, cluster
+GROUP BY ActorCountry, ActorType, cluster
 """
 
 type_table = spark.sql(type_query)
