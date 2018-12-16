@@ -53,6 +53,14 @@ Regarding the data size, the total dataset weight is of 112GB but it is mostly c
 The script we ran on the cluster are located in the src folder.
 To extract the aforementionned columns, we used *get\_usefull\_data.py*, *sample\_fraction.py* is used to sample a fraction of the data that we can use locally. *perform\_join.py* is a utility function used by the other scripts to preprocess the parquet files outputted by *get\_usefull\_data.py*. The other scripts generate the different dataframes we load in the notebook from the parquet files.  
 
+# Repository
+	- data/			Parquet and CSV files to be computed and analyse
+	- data story/		Plots to be export to the datastory
+	- src/			Python scripts to compute plots and a few other actions
+	- doc/			GDELT documentation
+	- Notebook.ipynb 	Principal notebook where all the data is computed
+	- README.md
+	
 # A list of internal milestones
 <!-- Add here a sketch of your planning for the next project milestone. -->
 
