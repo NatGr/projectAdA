@@ -22,7 +22,10 @@ The goal and motivation of the project would be to identify countries that are l
 	 the event refers to (ex: government, civilians,...) and refine the score of a 
 	 country in different scores. This will also reduce the amount of available data 
 	 since the *Actor1Type1Code* field is often blank.
-	 - Showing differences between the opinions of different mediums inside of  acountry
+	 - Showing differences between the opinions of different media inside of  acountry
+
+	 
+To answer these questions, we extracted the data from the GDELT dataset (see next section). We first analysed the number of samples we had for each case (taking actors into account, dividing new sources by their size in such a way that small medias have as much mentions as big medias, ...). We then used that information to compute confidence intervals. Since our methodology for the CI suffers from approximations that are invalid when the data size is small, we did not show the corresponding cases in our plots (count\_mentions < 2000).
 
 # Dataset
 <!-- List the dataset(s) you want to use, and some ideas on how do you expect to get, manage, process and enrich it/them. Show us you've read the docs and some examples, and you've a clear idea on what to expect. Discuss data size and format if relevant. -->
@@ -44,7 +47,11 @@ We want to use the GDELT dataset. More precisely we are interested in:
 		has he computed the metadata correctly
 		- MentionDocTone: the tone used in the article.
 
-Regarding the data size, the total dataset weight is of 112GB but it is mostly composed of the GDELT graph which we won't use. After performing the above mentionned data selecting/cleaning, the size of the parquet files were of 0.83 and 3.09 GB (12GB on disc). We thus decided to download a subset of these locally to test our scripts and then to perform the analysis on the real data on the cluster.
+Regarding the data size, the total dataset weight is of 112GB but it is mostly composed of the GDELT graph which we won't use. After performing the above mentionned data selecting/cleaning, the size of the parquet files were of 0.83 and 3.09 GB (12GB on disc). We thus decided to download a subset of these locally to test our scripts and then to perform the analysis on the real data on the cluster.  
+
+
+The script we ran on the cluster are located in the src folder.
+To extract the aforementionned columns, we used *get\_usefull\_data.py*, *sample\_fraction.py* is used to sample a fraction of the data that we can use locally. *perform\_join.py* is a utility function used by the other scripts to preprocess the parquet files outputted by *get\_usefull\_data.py*. The other scripts generate the different dataframes we load in the notebook from the parquet files.  
 
 # A list of internal milestones
 <!-- Add here a sketch of your planning for the next project milestone. -->
