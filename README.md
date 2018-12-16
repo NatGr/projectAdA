@@ -100,6 +100,13 @@ The presentation should be organised as follow (subject to change):
 2. inner vs outer view interpretation
 3. clustering
 
+# Repartition between group members
+
+Nathan : Data collection on cluster, preliminary data analysis, Clustering of the Different Countries, Ranking Between Each Countries, Influence Of Actor Types/country size, global relecture;
+
+Magali : preliminary data analysis, Introduction, textual description and Problem formulation, Conclusion, website journal design, majority of presentation, global relecture;
+
+Christophe : preliminary data analysis, number of mentions analysis, graph networks analysis, difference between two countries, majority of poster conception,global relecture;
 
 # Questions for TAa
 <!-- Add here some questions you have for us, in general or project-specific. -->
